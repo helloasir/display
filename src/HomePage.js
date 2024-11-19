@@ -1,7 +1,3 @@
-<<<<<<< HEAD:src/Homepage.js
-// import React, { useState, useEffect } from 'react';
-=======
->>>>>>> f912fcc0e27ddfde81fee69f34d69e5ddc4504b3:src/HomePage.js
 import { useParams, Link } from 'react-router-dom';
 import Pagination from './Pagination';
 import webs from './data/webs.json';
