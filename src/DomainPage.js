@@ -1,6 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import webs from './data/webs.json';
+import './DomainPage.css'; // Import the new CSS file
+
 
 const DomainPage = () => {
   const { domain } = useParams();
@@ -11,24 +13,28 @@ const DomainPage = () => {
   }
 
   return (
-    <div style={{ textAlign: 'center' }}>
-      <h1>Details for {web.Domain}</h1>
-      <table style={{ margin: '0 auto', border: '1px solid black' }}>
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Domain</th>
-            <th>Data 1</th>
-            <th>Data 2</th>
-            <th>Data 3</th>
-          </tr>
-        </thead>
+    <div className="domain-container">
+      <h1 className="domain-title">Details for {web.Domain}</h1>
+      <table className="domain-table">
         <tbody>
           <tr>
+            <th>Rank</th>
             <td>{web.Rank}</td>
+          </tr>
+          <tr>
+            <th>Domain</th>
             <td>{web.Domain}</td>
+          </tr>
+          <tr>
+            <th>Data 1</th>
             <td>{web.data1}</td>
+          </tr>
+          <tr>
+            <th>Data 2</th>
             <td>{web.data2}</td>
+          </tr>
+          <tr>
+            <th>Data 3</th>
             <td>{web.data3}</td>
           </tr>
         </tbody>

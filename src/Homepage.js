@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Pagination from './Pagination';
 import webs from './data/webs.json';
+import './Homepage.css'; // Importing a CSS file for styling
 
 const Homepage = () => {
   const { pageNumber = 1 } = useParams();
@@ -11,9 +12,9 @@ const Homepage = () => {
   const currentData = webs.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <div style={{ textAlign: 'center' }}>
-      <h1>Websites</h1>
-      <table style={{ margin: '0 auto', border: '1px solid black' }}>
+    <div className="homepage-container">
+      <h1 className="homepage-title">Websites</h1>
+      <table className="websites-table">
         <thead>
           <tr>
             <th>Rank</th>
@@ -25,7 +26,7 @@ const Homepage = () => {
             <tr key={index}>
               <td>{web.Rank}</td>
               <td>
-                <Link to={`/domain/${web.Domain}`}>{web.Domain}</Link>
+                <Link to={`/domain/${web.Domain}`} className="domain-link">{web.Domain}</Link>
               </td>
             </tr>
           ))}

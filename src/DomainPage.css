@@ -1,0 +1,69 @@
+/* DomainPage.css */
+
+.domain-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .domain-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .domain-table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .domain-table th, .domain-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .domain-table th {
+    background-color: #f4f4f4;
+    width: 30%;
+  }
+  
+  .domain-table td {
+    background-color: #fafafa;
+  }
+  
+  /* Adding padding and spacing for better readability */
+  .domain-container .domain-title {
+    font-size: 2rem;
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  .domain-table th {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .domain-table td {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .domain-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .domain-table tr:hover {
+    background-color: #e9e9e9;
+  }
+  
+  /* Adding some spacing for better readability */
+  .domain-table tr {
+    padding: 10px;
+  }
+  

@@ -1,0 +1,75 @@
+/* Homepage.css */
+
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .homepage-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .websites-table {
+    width: 40%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .websites-table th, .websites-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .websites-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .domain-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .domain-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  /* Pagination styling */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  li {
+    margin: 0 5px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 5px 10px;
+    /* border: 1px solid #007bff;
+    border-radius: 5px; */
+  }
+  
+  a:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  a:focus, a:active {
+    outline: none;
+  }
+  
