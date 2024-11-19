@@ -4,7 +4,7 @@ import Pagination from './Pagination';
 import webs from './data/webs.json';
 import './HomePage.css'; // Importing a CSS file for styling
 
-const Homepage = () => {
+const HomePage = () => {
   const { pageNumber = 1 } = useParams();
   const itemsPerPage = 100;
   const totalItems = webs.length;
@@ -37,4 +37,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default HomePage;
