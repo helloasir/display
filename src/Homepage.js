@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Pagination from './Pagination';
 import webs from './data/webs.json';
-import './Homepage.css'; // Importing a CSS file for styling
+import './HomePage.css'; // Importing a CSS file for styling
 
 const Homepage = () => {
   const { pageNumber = 1 } = useParams();
