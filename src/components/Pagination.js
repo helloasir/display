@@ -1,60 +1,30 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Pagination = ({ currentPage, totalPages, onPageChange }) => {
-  const handlePrevious = () => {
-    if (currentPage > 1) {
-      onPageChange(currentPage - 1);
+const Pagination = ({ currentPage, totalPages }) => {
+  const navigate = useNavigate();
+
+  const handlePageChange = (page) => {
+    if (page > 0 && page <= totalPages) {
+      // Navigate to the new page based on the page number
+      navigate(`/page/${page}`);
     }
-  };
-
-  const handleNext = () => {
-    if (currentPage < totalPages) {
-      onPageChange(currentPage + 1);
-    }
-  };
-
-  const handlePageClick = (page) => {
-    onPageChange(page);
-  };
-
-  // Generate pagination buttons dynamically
-  const renderPageNumbers = () => {
-    const pages = [];
-    for (let i = 1; i <= totalPages; i++) {
-      pages.push(
-        <button
-          key={i}
-          onClick={() => handlePageClick(i)}
-          style={{
-            margin: '0 5px',
-            padding: '5px 10px',
-            backgroundColor: currentPage === i ? '#007bff' : '#f1f1f1',
-            color: currentPage === i ? '#fff' : '#000',
-            border: '1px solid #ddd',
-            borderRadius: '3px',
-          }}
-        >
-          {i}
-        </button>
-      );
-    }
-    return pages;
   };
 
   return (
-    <div style={{ marginTop: '10px', textAlign: 'center' }}>
+    <div style={{ textAlign: 'center', marginTop: '20px' }}>
       <button
-        onClick={handlePrevious}
+        onClick={() => handlePageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        style={{ marginRight: '5px' }}
       >
-        Previous
+        Prev
       </button>
-      {renderPageNumbers()}
+      <span style={{ margin: '0 10px' }}>
+        Page {currentPage} of {totalPages}
+      </span>
       <button
-        onClick={handleNext}
+        onClick={() => handlePageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        style={{ marginLeft: '5px' }}
       >
         Next
       </button>
